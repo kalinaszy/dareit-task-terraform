@@ -1,5 +1,10 @@
-resource "google_compute_instance" "dareit-vm-ci" {
-  name         = "dareit-vm-tf-ci"
+resource "google_storage_bucket" "dareit-tf-three" {
+  name     = "dareit-tf-three"
+  location = "us-central1"
+}
+
+resource "google_compute_instance" "dareit-vm-ci-three" {
+  name         = "dareit-vm-tf-ci-three"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
 
